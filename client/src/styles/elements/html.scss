@@ -1,0 +1,39 @@
+/**
+ * `<html>` element and `:root` (probably `<html>`) styling.
+ *
+ * There are a few extra, low-level layout bits in here that don't really have a better place to go.
+ */
+
+// This isn't a great place for this, but it has to go somewhere.
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+:root,
+html,
+body,
+.app {
+  margin: 0;
+  color: $color-black;
+  font-family: $font-body;
+}
+
+:root,
+html,
+body {
+  min-height: 100vh;
+}
+
+// Adjust the size of `rem` units for small and large screen sizes.
+:root {
+  font-size: 14pt;
+
+  @media #{$break-smartphone} {
+    font-size: 12pt;
+  }
+
+  @media #{$break-desktop-large} {
+    font-size: 16pt;
+  }
+}

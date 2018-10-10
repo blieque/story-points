@@ -1,0 +1,52 @@
+/**
+ * Global styling values for use throughout all styling – utility and component.
+ */
+
+// Units
+
+// Base unit that most measurements should be multiples of. This brings consistency to layout.
+$unit: 0.8rem;
+
+// Base timing unit for animations to be specified in multiples of.
+$unit-time: 0.2s;
+
+// Timing functions
+
+// Snappy ease-out-esque timing function providing a responsive feel to the UI.
+$timing-function: cubic-bezier(.25, .1, 0, 1);
+
+// Colours
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-blue: #201760;
+$color-red: #ee0030;
+
+// Typography
+
+$font-body: 'cmu serif', 'Times New Roman', serif;
+
+// Breakpoints
+
+// Measurements to use as viewport-width thresholds between semantic breakpoints.
+$break-metric-small-medium: 10cm;
+$break-metric-medium-large: 18cm;
+$break-metric-large-extra: 30cm;
+
+// Semantic aliases to make use of `@media` more intuitive.
+// - 'break-small' – smartphone-sized screens and smaller.
+// - 'break-tablet' – tablet- and netbook-sized screens and smaller.
+// - 'break-desktop' – typical notebook/laptop screens and larger.
+// - 'break-desktop-large' – large desktop screens and larger.
+$break-smartphone: (max-width: $break-metric-small-medium);
+$break-tablet: (max-width: $break-metric-medium-large);
+$break-desktop: (min-width: $break-metric-medium-large);
+$break-desktop-large: (min-width: $break-metric-large-extra);
+
+// Sass placeholder classes
+
+// These can be imported in the global stylesheet as placeholder classes do not create any immediate
+// output.
+@import 'placeholders/layout';
+@import 'placeholders/typography';

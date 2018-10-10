@@ -1,0 +1,61 @@
+{
+  "name": "story-points-client",
+  "version": "0.1.0",
+  "description": "The client component of a collaboration app for assigning story points",
+  "author": "Blieque Mariguan <himself@blieque.co.uk>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blieque/story-points.git"
+  },
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "build": "webpack build/webpack.prod.conf.js",
+    "lint": "echo \"WARNING: This cannot lint single-file components.\" && tslint --project ."
+  },
+  "devDependencies": {
+    "@types/node": "^10.10.1",
+    "css-loader": "^1.0.0",
+    "cssnano-preset-advanced": "^4.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "portfinder": "^1.0.17",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.4.2",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-loader": "^3.6.0",
+    "tslint-microsoft-contrib": "^5.2.1",
+    "typescript": "^3.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.1.1",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/blieque/story-points/issues"
+  },
+  "homepage": "https://github.com/blieque/story-points#readme",
+  "keywords": [
+    "story",
+    "point",
+    "user",
+    "estimation",
+    "card",
+    "agile"
+  ]
+}

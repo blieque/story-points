@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    // Disabled because the TypeScript that vue-loader presents to TSLint contains long sequences of
+    // newlines.
+    "no-consecutive-blank-lines": false,
+    // Disabled because importing classes from packages fouls this rule, e.g.,
+    // `import Vue from 'vue'`.
+    "import-name": false
+  }
+}

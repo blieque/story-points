@@ -1,0 +1,17 @@
+@import 'global';
+
+@font-face {
+  font-family: 'cmu serif';
+  src: url('../assets/fonts/cmunrm.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'cmu serif';
+  src: url('../assets/fonts/cmunbx.woff') format('woff');
+  font-weight: 700;
+}
+
+@import 'elements/a';
+@import 'elements/hr';
+@import 'elements/html';

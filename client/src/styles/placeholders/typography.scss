@@ -1,0 +1,21 @@
+/**
+ * Typography-related Sass placeholder classes
+ *
+ * This provides realignment to make heading text better fit its containing block. The
+ * pseudo-elements cause heading elements to only be as tall as an uppercase "T". This makes the
+ * baseline of the typography align with the bottom of the element. Decending characters will extend
+ * outside of the element, and tall ascenders may extend out the top. Using pseudo-elements allows
+ * the margins of the headings to be set as usual by other styles.
+ */
+
+%type-container-fix {
+  &::before {
+    @extend %basic-pseudo;
+    margin-top: -0.4em;
+  }
+
+  &::after {
+    @extend %basic-pseudo;
+    margin-bottom: -0.25em;
+  }
+}
