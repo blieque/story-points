@@ -11,11 +11,11 @@
 %type-container-fix {
   &::before {
     @extend %basic-pseudo;
-    margin-top: -0.4em;
+    margin-top: -0.25em;
   }
 
   &::after {
     @extend %basic-pseudo;
-    margin-bottom: -0.25em;
+    margin-bottom: -0.35em;
   }
 }

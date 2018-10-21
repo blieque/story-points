@@ -1,0 +1,13 @@
+/**
+ * Paragraphs
+ *
+ * This provides realignment to make paragraph text better fit its containing block. See
+ * `../placeholders/typography.scss` for more details about what the pseudo-elements do.
+ */
+
+p {
+  @extend %type-container-fix;
+  // Prevent margin collapsing and let the pseudo-elements resize the container.
+  padding: 0.005rem;
+  margin: 0;
+}

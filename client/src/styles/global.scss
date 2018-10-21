@@ -6,6 +6,7 @@
 
 // Base unit that most measurements should be multiples of. This brings consistency to layout.
 $unit: 0.8rem;
+$unit-thin: $unit * 0.05;
 
 // Base timing unit for animations to be specified in multiples of.
 $unit-time: 0.2s;

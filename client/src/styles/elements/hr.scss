@@ -2,17 +2,31 @@
  * Horizontal rules
  */
 hr {
+  margin: $unit * 2 0;
   border: none;
-  height: 0.07em;
+  height: 0.05em;
   color: inherit;
   box-shadow: inset 0 0 0 1em;
 
-  /*
   &::before {
     @extend %basic-pseudo;
     position: absolute;
-    top: $unit * -0.5;
+    top: 0;
     left: 50%;
+    width: $unit * 2;
+    height: $unit * 0.5;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+      90deg,
+      $color-white,
+      $color-white $unit-thin,
+      transparent $unit-thin,
+      transparent calc(50% - #{$unit-thin / 2}),
+      $color-white calc(50% - #{$unit-thin / 2}),
+      $color-white calc(50% + #{$unit-thin / 2}),
+      transparent calc(50% + #{$unit-thin / 2}),
+      transparent calc(100% - #{$unit-thin}),
+      $color-white calc(100% - #{$unit-thin}),
+    );
   }
-  */
 }
