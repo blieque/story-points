@@ -50,6 +50,12 @@ module.exports = async function webpackConfig() {
     devServer: {
       host,
       port,
+      proxy: {
+        '/data/*': {
+          target: 'http://127.0.0.1:3000',
+          ws: true,
+        },
+      },
     },
 
     plugins: [

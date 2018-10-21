@@ -1,32 +1,30 @@
 <template>
   <div class="welcome">
-    <div class="welcome__content">
-      <p @click="focusInput(1)">Enter your intials to participate:</p>
+    <p @click="focusInput(1)">Enter your intials to participate:</p>
 
-      <div class="welcome__input-wrapper">
-        <input
-          class="welcome__input"
-          v-model="initialFirst"
-          type="text"
-          maxlength="1"
-          autofocus>
-        <input
-          class="welcome__input"
-          v-model="initialLast"
-          type="text"
-          maxlength="1">
-      </div>
-
-      <hr>
-
-      <p>
-        <a
-          href=""
-          @click.prevent="$emit('identify', { name: null })">
-          I just want to observe.
-        </a>
-      </p>
+    <div class="welcome__input-wrapper">
+      <input
+        class="welcome__input"
+        v-model="initialFirst"
+        type="text"
+        maxlength="1"
+        autofocus>
+      <input
+        class="welcome__input"
+        v-model="initialLast"
+        type="text"
+        maxlength="1">
     </div>
+
+    <hr>
+
+    <p>
+      <a
+        href=""
+        @click.prevent="$emit('identify', { name: null })">
+        I just want to observe.
+      </a>
+    </p>
   </div>
 </template>
 
@@ -72,13 +70,7 @@ export default Vue.extend({
 
   mounted() {
     this.el.inputs = this.$el.querySelectorAll('input');
-    setTimeout(
-      () => {
-        console.dir(this.el);
-        this.focusInput(0);
-      },
-      2000,
-    );
+    this.focusInput(0);
   },
 
   methods: {
@@ -89,7 +81,7 @@ export default Vue.extend({
     sanitiseInitial(input) {
       const match = input.toUpperCase().match(/^[A-Z]$/);
       return match !== null ? match[0] : '';
-    }
+    },
   },
 });
 </script>
@@ -98,26 +90,16 @@ export default Vue.extend({
 @import '@/styles/global';
 
 .welcome {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background: $color-blue;
-  color: $color-white;
+  padding: $unit * 3;
+  width: $unit * 25;
+  max-width: 100%;
 
-  &__content {
-    padding: $unit * 3;
-    width: $unit * 25;
-    max-width: 100%;
+  > * {
+    margin-top: $unit * 2;
+  }
 
-    > * {
-      margin-top: $unit * 2;
-    }
-
-    > :first-child {
-      margin-top: 0;
-    }
+  > :first-child {
+    margin-top: 0;
   }
 
   &__input-wrapper {
