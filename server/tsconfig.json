@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "outDir": "dist",
+
+    // Stricter type checking.
+    "noImplicitThis": true,
+    //"strict": true,
+    //"noImplicitAny": true,
+    "preserveConstEnums": true,
+
+    // Style options.
+    "newLine": "lf",
+
+    // Load definitions for browser APIs
+    "lib": [
+      "es6",
+      "dom"
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
